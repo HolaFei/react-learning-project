@@ -31,10 +31,25 @@ const MyList = () => {
     })
   }
 
+  const handleDelete = (id) => {
+    dispach({
+      type: 'del',
+      id
+    })
+  }
+
+  const handleEdit = (id, text) => {
+    dispach({
+      type: 'edit',
+      id,
+      text
+    })
+  }
+
   return (
     <div className='list-component'>
       <Add text={text} onChange={handleChange} onAdd={handleAdd} />
-      <Lists list={list} />
+      <Lists list={list} onDeleted={handleDelete} onEdit={handleEdit} />
     </div>
   );
 };
