@@ -5,6 +5,7 @@ import Header from './components/Header/Header'
 import Description from './components/Description/Description';
 import FormPlayer from './components/PersonForm';
 import MyList from './components/MyList/MyList';
+import CtxHeading from './components/CtxHeading/CtxHeading';
 
 const { Paragraph } = Typography;
 
@@ -24,6 +25,11 @@ function App() {
         下面开始学习useReducer和useImmerReducer.
       </Paragraph>
       <MyList />
+      <Divider />
+      <Paragraph>
+        好的，下面我们来看看useContext
+      </Paragraph>
+      <CtxHeading />
     </div>
   );
 }
